@@ -1,0 +1,285 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f8fb;
+    color: #0b1f33;
+}
+
+/* NAVIGATION */
+
+header {
+    background-color: #0b1f33;
+    padding: 20px 7%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #39a9e8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #39a9e8;
+}
+
+.nav-button {
+    background-color: #168bd0;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #39a9e8;
+}
+
+/* HOME */
+
+.hero {
+    height: 550px;
+    background:
+        linear-gradient(rgba(5, 20, 35, 0.55),
+        rgba(5, 20, 35, 0.65)),
+        url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1600")
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #39a9e8;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 58px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: #168bd0;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    margin-top: 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: white;
+    color: #0b1f33;
+}
+
+/* PRODUCTS */
+
+.products {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: #168bd0;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.product-info h4 {
+    color: #168bd0;
+    font-size: 22px;
+    margin: 18px 0;
+}
+
+.product-info button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    background-color: #0b1f33;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-info button:hover {
+    background-color: #168bd0;
+}
+
+/* ABOUT */
+
+.about {
+    background-color: #0b1f33;
+    color: white;
+    text-align: center;
+    padding: 70px 15%;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.about p {
+    line-height: 1.8;
+    color: #d0dce6;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 15px;
+}
+
+.contact a {
+    color: #168bd0;
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #071626;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+}
+
